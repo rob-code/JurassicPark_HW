@@ -51,9 +51,17 @@ it("can remove all dinosaurs of a particular type", function(){
 })
 
 
-
 // should get all the dinosaurs with an average offspring count of more than 2
 
+it("can count dinosaurs with average offspring greater than 2", function() {
+  park.addDinosaur(dino1);
+  park.addDinosaur(dino2);
+  park.addDinosaur(dino3);
+  park.addDinosaur(dino4);
+  var breedingDinos = park.dinosaursWithOffSpringGreaterThanTwo();
+  assert.strictEqual(2, breedingDinos.length);
+
+})
 
 
 

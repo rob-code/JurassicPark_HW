@@ -1,5 +1,6 @@
 var Park = function(){
   this.enclosure = [];
+  this.breeders = [];
 }
 
 Park.prototype = {
@@ -21,17 +22,24 @@ Park.prototype = {
   },
 
   removeDinosaurOfType: function(dinosaurType){
-    
     for (i = 0; i < this.enclosure.length; i++){
-
         var dinosaur = this.enclosure[i];         
-        if (dinosaur.type === dinosaurType){
-          console.log("Type to remove " + dinosaur.type);
-        this.enclosure.splice(i, 1);
-      }
-      }
+          if (dinosaur.type === dinosaurType){
+            this.enclosure.splice(i, 1);
+          }
     }
+  },
 
+  dinosaursWithOffSpringGreaterThanTwo: function(){
+    for (i = 0; i < this.enclosure.length; i++){
+      var dinosaur = this.enclosure[i];
+        if (dinosaur.offSpring > 2){
+          this.breeders.push(dinosaur);
+        }
+
+    }
+    return this.breeders
+  }
 
 
 
