@@ -26,15 +26,15 @@ it("can open dinosaur park with no dinosaurs", function(){
   assert.strictEqual(0, park.numberOfDinosaurs());
 })
 
-
-
-
-// it("can add dinosaur to park", function(){
-//   assert.strictEqual(2, park.numberOfDinosaurs());
-// })
-
-
 // should be able to add dinosaur
+it("can add dinosaur to park", function(){
+  park.addDinosaur(dino1);
+  park.addDinosaur(dino2);
+  assert.strictEqual(2, park.numberOfDinosaurs()); 
+})
+
+
+
 // should be able to remove all dinosaurs of a particular type
 // should get all the dinosaurs with an average offspring count of more than 2
 

@@ -6,7 +6,13 @@ Park.prototype = {
 
   numberOfDinosaurs: function(){
      return this.enclosure.length;
+  },
+
+  addDinosaur: function(dinosaur){
+    this.enclosure.push(dinosaur);
   }
+
+
 
 }
 
