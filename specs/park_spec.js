@@ -62,6 +62,27 @@ it("can count dinosaurs with average offspring greater than 2", function() {
   assert.strictEqual(2, breedingDinos.length);
 })
 
-
-
+it("can count dinosaurs with average offspring greater than 2", function() {
+  park.addDinosaur(dino1);
+  park.addDinosaur(dino2);
+  park.addDinosaur(dino3);
+  park.addDinosaur(dino4);
+  var breedingDinos = park.dinosaursWithOffSpringGreaterThanTwo();
+  assert.strictEqual(2, breedingDinos.length);
 })
+
+
+it("can count future population of dinosaurs", function() {
+  park.addDinosaur(dino1);
+  park.addDinosaur(dino2);
+  park.addDinosaur(dino3);
+  park.addDinosaur(dino4);
+  var breedingDinos = park.futurePopulation(4);
+  
+})
+
+
+
+
+
+});

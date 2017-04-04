@@ -1,6 +1,10 @@
 var Park = function(){
   this.enclosure = [];
   this.breeders = [];
+  this.population = 0;
+  this.carryingCapacity = 1000;
+  this.r = 0.1;
+ 
 }
 
 Park.prototype = {
@@ -38,9 +42,28 @@ Park.prototype = {
         }
 
     }
-    return this.breeders
+    return this.breeders;
+  },
+
+  futurePopulation: function (years) {
+   
+
+    //var seedPopulation = this.enclosure.length/10;
+    var seedPopulation = 0.01; 
+
+    for (i = 0; i < years; i ++){
+
+      var population = 1/ (1 + ((1/seedPopulation) - 1) * (Math.pow(Math.E, -1 * this.r * i)));     
+
+      var population = population * this.carryingCapacity;
+
+      console.log(population);
+
+    }
   }
 
-  }
+
+
+}
 
 module.exports = Park;
