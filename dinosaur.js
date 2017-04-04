@@ -3,7 +3,4 @@ var Dinosaur = function(type, offSpring){
   this.offSpring = offSpring;
 }
 
-
-
-
 module.exports = Dinosaur;
