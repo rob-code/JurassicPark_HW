@@ -10,14 +10,11 @@ var dino3;
 var dino4;
 var park;
 
-
 beforeEach(function(){
-
   dino1 = new Dinosaur("Tyranosauraus", 2);
   dino2 = new Dinosaur("Velociraptor", 4);
   dino3 = new Dinosaur("Triceratops", 1);
   dino4 = new Dinosaur("Stegasauraus", 5);
-  
   park = new Park(); 
 })
 
@@ -33,9 +30,27 @@ it("can add dinosaur to park", function(){
   assert.strictEqual(2, park.numberOfDinosaurs()); 
 })
 
-
+it("can list all dinosaurs in park", function(){
+  park.addDinosaur(dino1);
+  park.addDinosaur(dino2);
+  park.addDinosaur(dino3);
+  park.addDinosaur(dino4);
+  park.listAllDinosaurs();
+})
 
 // should be able to remove all dinosaurs of a particular type
+// it("can remove all dinosaurs of a particular type", function(){
+//   park.addDinosaur(dino1);
+//   park.addDinosaur(dino2);
+//   park.addDinosaur(dino3);
+//   park.addDinosaur(dino4);
+//   park.removeDinosaurOfType("Velociraptor");
+//   assert.strictEqual(3, park.numberOfDinosaurs()); 
+//   park.listAllDinosaurs();
+// })
+
+
+
 // should get all the dinosaurs with an average offspring count of more than 2
 
 
