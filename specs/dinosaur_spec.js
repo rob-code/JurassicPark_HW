@@ -24,6 +24,6 @@ describe("Dinosaur", function() {
 
 
 
-})
+});
 
 
