@@ -39,15 +39,16 @@ it("can list all dinosaurs in park", function(){
 })
 
 // should be able to remove all dinosaurs of a particular type
-// it("can remove all dinosaurs of a particular type", function(){
-//   park.addDinosaur(dino1);
-//   park.addDinosaur(dino2);
-//   park.addDinosaur(dino3);
-//   park.addDinosaur(dino4);
-//   park.removeDinosaurOfType("Velociraptor");
-//   assert.strictEqual(3, park.numberOfDinosaurs()); 
-//   park.listAllDinosaurs();
-// })
+it("can remove all dinosaurs of a particular type", function(){
+  park.addDinosaur(dino1);
+  park.addDinosaur(dino2);
+  park.addDinosaur(dino3);
+  park.addDinosaur(dino4);
+  park.addDinosaur(dino1);
+  park.removeDinosaurOfType("Tyranosauraus");
+  assert.strictEqual(3, park.numberOfDinosaurs()); 
+  park.listAllDinosaurs();
+})
 
 
 
