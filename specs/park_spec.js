@@ -77,7 +77,7 @@ it("can count future population of dinosaurs", function() {
   park.addDinosaur(dino2);
   park.addDinosaur(dino3);
   park.addDinosaur(dino4);
-  var breedingDinos = park.futurePopulation(4);
+  var breedingDinos = park.futurePopulation(20);
   
 })
 

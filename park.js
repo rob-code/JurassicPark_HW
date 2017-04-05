@@ -2,8 +2,8 @@ var Park = function(){
   this.enclosure = [];
   this.breeders = [];
   this.population = 0;
-  this.carryingCapacity = 1000;
-  this.r = 0.1;
+  this.carryingCapacity = 100;
+  this.r = 0.5;
  
 }
 
@@ -47,6 +47,7 @@ Park.prototype = {
 
   futurePopulation: function (years) {
    
+    //assume logistics population growth curve
 
     //var seedPopulation = this.enclosure.length/10;
     var seedPopulation = 0.01; 
